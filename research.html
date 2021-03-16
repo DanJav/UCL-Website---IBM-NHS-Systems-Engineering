@@ -243,6 +243,72 @@
 
             <h2>Technology review</h2>
 
+            <!-- React -->
+
+            <hr class="minor" />
+
+            <h3>React</h3>
+            <p>
+              A key part of the project is altering Jitsi’s UI, for which we
+              needed to choose a JavaScript framework or library. The two most
+              widely used libraries/frameworks in this field are React, which is
+              an open-source library, and Angular, which is a framework. For
+              this project, we have decided to keep using React. routes and
+              scalability.
+            </p>
+
+            <p><b> Advantages of React </b></p>
+
+            <p>
+              The main advantage of React is that it’s
+              <b>smaller in size</b> than Angular, which is very popular web
+              framework. This means that on average less Javascript code has to
+              be sent and run by the client, which makes a noticebale
+              performance difference for devices with small memory sizes or
+              slower internet connection. React is also
+              <b>easier to start with</b>
+              if the programmer has prior knowledge of JavaScript as it relies
+              on common Javascript patterns, oposed to Angular which introduces
+              a lot of complex desgins such as dependency injection which may
+              prove unnecessary for medium sized projects. React provides enough
+              advantages to make the achievement of our project requirements due
+              to its ease of use, all while providing the tools necessary to
+              complete the project due to its compatibility with third party
+              modules.
+            </p>
+            <p>
+              React also has a <b>virtual DOM</b> (Document Object Model)
+              implementation. The virtual DOM holds the reactive state of the
+              components that gets managed at Javascript runtime, which is
+              different form the actual rendering time of the DOM. This limits
+              the frequency of updates to the actual DOM, making it faster and
+              more suitable for a video calling application that requires high
+              responsiveness and less processing overhead for the devices it
+              runs on. app.
+            </p>
+            <p>
+              React is very useful at improving <b>development efficiency</b>.
+              Firstly, React components give the project extensibility by
+              allowing developers to reuse code in different context. This
+              improves readability and code quality overall as a tested and
+              functional component can be reused in multiple parts of the
+              project with the confidence of not introducing bugs. Also, this
+              gives structure to complex web code bases wthat tend to be written
+              in a very procedural manner.
+            </p>
+            <p>
+              The <b>large toolset</b> of 3rd party libraries available for
+              React is very helpful when developing large projects. Since React
+              is a JavaScript library it allows the usage of most vanilla
+              Javascript plugins which reduces development time, allowing
+              developers to focus on new features rather than recreating already
+              available functionality.
+            </p>
+            <p>
+              Overall, React is the more realistic option, due to the afore
+              mentioned arguments, accessibility and use of plain JavaScript.
+            </p>
+
             <!-- Next.js -->
 
             <hr class="minor" />
@@ -262,32 +328,37 @@
             <p>
               Performance is one of the most important factors for our choice.
               React requires difficult techniques for optimization. Next.js
-              simplifies this process
+              simplifies this process.
             </p>
             <p>
-              Automatic code-splitting is a Next.js feature that dramatically
-              improves loading times of pages by dynamically loading JavaScript
-              code that is packaged into bundles. With Next.js’s file system
-              based routing we are free to scale our application while affecting
-              the load times of our pages. When a specific route is requested by
-              the client, Next.js will load that specific JavaScript bundle that
-              corresponds to the requested route, thus not overloading the
-              client with unused code. These bundles are automatically created
-              by Next.js using webpack which includes optimization features by
-              determining which code is shared across certain components.
+              <b>Automatic code-splitting</b> is a Next.js feature that
+              dramatically improves loading times of pages by dynamically
+              loading JavaScript code that is packaged into bundles. With
+              Next.js’s file system based routing we are free to scale our
+              application while affecting the load times of our pages. When a
+              specific route is requested by the client, Next.js will load that
+              specific JavaScript bundle that corresponds to the requested
+              route, thus not overloading the client with unused code. These
+              bundles are automatically created by Next.js using webpack which
+              includes optimization features by determining which code is shared
+              across certain components.
             </p>
+
             <p>
               One other feature that improves the loading time of the
-              application is dynamic import. Certain libraries may be needed
-              only when a certain action is done by the user, therefore Next.js
-              supports dynamic import which can load JavaScript code when the
-              user triggers certain actions, such as the click of a button.
+              application is <b>dynamic import</b>. Certain libraries may be
+              needed only when a certain action is done by the user, therefore
+              Next.js supports dynamic import which can load JavaScript code
+              when the user triggers certain actions, such as the click of a
+              button.
             </p>
             <p>
-              Pre-rendering is what makes a difference when using Next.js with
-              React. By default, Next.js pre-renders every page. This means that
-              Next.js generates HTML for each page in advance, instead of having
-              it all done by client-side JavaScript. Pre-rendering can result in
+              <b>Pre-rendering</b> is what makes a difference when using Next.js
+              with React. By default, Next.js pre-renders every page. This means
+              that Next.js generates HTML for each page in advance, instead of
+              having it all done by client-side JavaScript. Thus, this is solves
+              the previously mentioned disadvantage of using React for
+              static-generated pages. Moreover, pre-rendering can result in
               better performance and SEO.
             </p>
             <p>
@@ -295,85 +366,37 @@
               necessary for that page. When a page is loaded by the browser, its
               JavaScript code runs and makes the page fully interactive. Next.js
               has two forms of pre-rendering: <b> Static Generation </b> and
-              <b> Server-side Rendering </b>. The difference is in
-              <b> when </b> it generates the HTML for a page: Static Generation
-              generates HTML build time reusing it for each request, while the
-              other generates HTML on each request.
+              <b> Server-side Rendering </b>. The difference is in when it
+              generates the HTML for a page. Static Generation generates HTML
+              build time reusing it for each request, while the other generates
+              HTML on each request. likely to lose support from their company.
             </p>
             <p>
-              Another important aspect of this framework is the caching
-              mechanism for remote fetches. Vercel, the creator of Next.js
-              provides a very lightweight library, named SWR, that improves the
-              fetching mechanism in React. The name “SWR” is derived from
-              stale-while-revalidate, a HTTP cache invalidation strategy
-              popularized by HTTP RFC 5861. SWR is a strategy to first return
-              the data from cache (stale), then send the fetch request
+              Another important aspect of this framework is the
+              <b>caching mechanism</b> for remote fetches. Vercel, the creator
+              of Next.js provides a very lightweight library, named SWR, that
+              improves the fetching mechanism in React. The name “SWR” is
+              derived from stale-while-revalidate, a HTTP cache invalidation
+              strategy popularized by HTTP RFC 5861. SWR is a strategy to first
+              return the data from cache (stale), then send the fetch request
               (revalidate), and finally come with the up-to-date data. In the
-              context of our application, SWR server a very important role in
-              caching data …
+              context of our project, SWR server a very important role in
+              adapting the application to the Progressive Web Application
+              standard that would allow it to run "offline" (without the use of
+              internet services). This enables us to create a PWA that can be
+              installed added to devices' home screens even if it is a web app.
             </p>
             <p><b> Deployment </b></p>
             <p>
               Since our base code has already been designed to function well
               with the Vercel deployment system (as recommended by Next.js on
-              their website), Next.js makes a great choice.
-            </p>
-            <p>
-              The process is very easy requiring only the repository of the
-              Next.js app and the configuration data to be copied to Vercel.
-              This will facilitate our production testing iterations by reducing
-              the time taken to redeploy and reconfigure our Next.js applciation
-              for production. Easy to deploy using Vercel, the creator of
-              Next.js. But gives the option of deploying on every server that
-              has Node.js.
-            </p>
-
-            <!-- React -->
-
-            <hr class="minor" />
-
-            <h3>React</h3>
-            <p>
-              A key part of the project is altering Jitsi’s UI, for which we
-              needed to choose a JavaScript framework or library. The two most
-              widely used libraries/frameworks in this field are React, which is
-              an open-source library, and Angular, which is a framework. For
-              this project, we have decided to keep using React.
-            </p>
-
-            <p><b> Advantages of React </b></p>
-
-            <p>
-              The main advantage of React is that it’s smaller than Angular and
-              easier to get used to if the programmer has prior knowledge of
-              JavaScript. Using React will make achieving the requirements of
-              the project more realistic due to its ease of use, all while
-              providing the tools necessary to complete the project due to its
-              compatibility with third party modules. The disadvantage of having
-              to import modules, however, is that our team has to make sure that
-              these stay consistent throughout the code. On the other hand,
-              React also has a virtual DOM (Document Object Model)
-              implementation, which limits the frequency of updates to the
-              actual DOM, making it faster and more suitable for a video calling
-              app.
-            </p>
-            <p>
-              Angular is a framework, so any necessary features will likely
-              already be within it, and not needing to import modules would make
-              using it more consistent. However, it is much larger, and
-              typically written in TypeScript, a language that builds on
-              JavaScript. This means that it would be significantly more
-              difficult to learn and would take longer to get started with.
-            </p>
-            <p>
-              React is owned by Facebook, while Angular is owned by Google, both
-              of which are known for shutting down projects for various reasons,
-              e.g. profitability. From a stability perspective, both are equally
-              likely to lose support from their company.
-            </p>
-            <p>
-              Overall, React is the more realistic option, mainly due to its
-              accessibility and use of plain JavaScript over TypeScript.
+              their website), Next.js makes a great choice. The process is very
+              easy requiring only the repository of the Next.js app and the
+              configuration data to be copied to Vercel. This will facilitate
+              our production testing iterations by reducing the time taken to
+              redeploy and reconfigure our Next.js application for production.
+              Easy to deploy using Vercel, the creator of Next.js. But gives the
+              option of deploying on every server that has Node.js.
             </p>
           </section>
         </div>
@@ -396,8 +419,8 @@
             </header>
             <ul>
               <li><a href="index.html">Homepage</a></li>
-              <li><a href="UI.html">UI Design</a></li>
-              <li><a href="systemdesign.html">System Design</a></li>
+              <li><a href="generic.html">Generic</a></li>
+              <li><a href="elements.html">Elements</a></li>
               <li>
                 <span class="opener">Requirements</span>
                 <ul>
@@ -413,10 +436,18 @@
               </li>
               <li><a href="blog.html">Blog</a></li>
               <li><a href="research.html">Research</a></li>
-              <li><a href="implementation.html">Implementation</a></li>
-              <li><a href="testing.html">Testing</a></li>
-              <li><a href="evaluation.html">Evaluation</a></li>
-              <li><a href="appendices.html">Appendices</a></li>
+              <li>
+                <span class="opener">Another Submenu</span>
+                <ul>
+                  <li><a href="#">Lorem Dolor</a></li>
+                  <li><a href="#">Ipsum Adipiscing</a></li>
+                  <li><a href="#">Tempus Magna</a></li>
+                  <li><a href="#">Feugiat Veroeros</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Maximus Erat</a></li>
+              <li><a href="#">Sapien Mauris</a></li>
+              <li><a href="#">Amet Lacinia</a></li>
             </ul>
           </nav>
 
