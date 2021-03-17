@@ -247,7 +247,7 @@
 
             <hr class="minor" />
 
-            <h3>React</h3>
+            <h2>React</h3>
             <p>
               A key part of the project is altering Jitsi’s UI, for which we
               needed to choose a JavaScript framework or library. The two most
@@ -313,7 +313,7 @@
 
             <hr class="minor" />
 
-            <h3>Next.js</h3>
+            <h2>Next.js</h3>
             <p>
               Next.js is a framework built on top of React that will empower us
               to create an even more performant and reactive application while
@@ -381,7 +381,7 @@
               return the data from cache (stale), then send the fetch request
               (revalidate), and finally come with the up-to-date data. In the
               context of our project, SWR server a very important role in
-              adapting the application to the Progressive Web Application
+              adapting the application to the Progressive Web Application (PWA)
               standard that would allow it to run "offline" (without the use of
               internet services). This enables us to create a PWA that can be
               installed added to devices' home screens even if it is a web app.
@@ -396,8 +396,79 @@
               our production testing iterations by reducing the time taken to
               redeploy and reconfigure our Next.js application for production.
               Easy to deploy using Vercel, the creator of Next.js. But gives the
-              option of deploying on every server that has Node.js.
+              option of deploying on every server that has Node.js, thus
+              allowing us to fulfil our requirement of deploying on a remote
+              server for users to be served the application seamlessly.
             </p>
+
+            <!-- Docker -->
+
+            <hr class="minor" />
+
+            <h2>Docker</h3>
+            <p>
+              Docker is a platform that enables your application to be deployed,
+              shipped and run on different systems and environments without
+              changing the source code. This is achieved by isolating the app
+              from the environment of the machine that is running on (host
+              machine). Those isolated environments are called
+              <b>containers</b> which can run quickly, securely and reliably
+              with all the needed dependencies. Docker is the industry standard
+              for container-based applications.
+            </p>
+            <p>
+              Containers can be built from Docker <b>images</b> which represent
+              immutable snapshots of software packages such as Ubuntu, Node.js
+              and many others. Thus, a container can be constructed to run
+              multiple software packages from multiple images without needing to
+              install them on the host machine.
+            </p>
+            <p>
+              Another very important feature is the <b>Docker Compose API</b>.
+              Docker Compose allows multiple containers to communicate at
+              runtime, thus giving the possibility of running parts of the
+              application from multiple environments. Docker inserts the
+              containers in their own local network that runs on the Docker
+              Host, separate from the network of the host machine. This enables
+              an application to have a server container that communicates with a
+              client container in a secure, isolated environment.
+            </p>
+            <p><b> Deployment </b></p>
+            <p>
+              In the context of our project, Docker is very useful in achieving
+              <b>cross-platform functionality</b>. More exactly, Docker would
+              allow clients to deploy the application consisting of the
+              client-side, server-side and database locally on the consumer
+              device without detriment to the features. Moreover, Docker
+              containers are very lightweight as they share the machine’s OS
+              system kernel and therefore do not require an OS per application.
+              This allows our application to
+              <b>run on lower-end hardware</b> and devices without consuming
+              resources unnecessarily.
+            </p>
+            <p><b> Privacy & Security </b></p>
+            <p>
+              Since Docker enables our application to run entirely locally, the
+              communication between client-server and server-database in the
+              <b>cloud is removed</b>. In addition, Docker containers are very
+              secure as they operate within their own
+              <b>isolated environment and network</b>. Most important security
+              features include: containers have their own namespace in the
+              kernel which means docker containers cannot see and interact with
+              host machine processes, limted attack surface of the Docker Engine
+              and restricted root access of the container processes on host
+              machine.
+            </p>
+
+            <!-- References -->
+
+            <hr class="minor" />
+
+            <h2>References</h2>
+
+            <p>Docker (2018). Docker Guide [online]. Available at: https://docs.docker.com/get-started/overview/ [accessed at 17 March 2021]</p>
+            <p>Docker (2018). Docker Resources [online]. Available at: https://www.docker.com/resources/what-container [accessed at 17 March 2021]</p>
+            
           </section>
         </div>
       </div>
